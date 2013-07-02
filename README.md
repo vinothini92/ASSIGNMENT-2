@@ -2,8 +2,7 @@ ASSIGNMENTS-2
 =============
 Find_sum:
   Given an Sorted List A[0...N].Find the sum of elements for an input K such that A[i]+A[j] = k
-  
-Since given array is already in sorted order technique which is similar to binary search is applied here.
+  Since given array is already in sorted order technique which is similar to binary search is applied here.
   
 Remove_duplicates:
   Remove duplicates from an Unsorted list.
