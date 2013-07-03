@@ -25,20 +25,7 @@ def kway_merge(list_size,elements):
             sort_Array.append(elements[0])
             print "sort array now: ",sort_Array
 
-            
-    '''for j in range(0,list_size):
-        for i in range(0,len(elements)):
-            if len(sort_array)<list_size*len(elements):
-                if elements[0] == d[i][j]:
-                    if temp[0] != d[i][m-1]:
-                        temp[0]=d[i][j+1]
-                        sort(temp)
-                    else:
-                        temp.remove(temp[0])
-                        sort(temp)
-                else:
-                    break
-    return sort_Array'''
+ 
 
 def heapify(nums,i,size):
     l = left_child(i)
