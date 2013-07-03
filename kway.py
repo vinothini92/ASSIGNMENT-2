@@ -11,7 +11,7 @@ def kway_merge(list_size,elements):
     sort_Array = []
     sort_Array.append(elements[0])
     print "Sorted Array in Descending order", sort_Array
-<<<<<<< HEAD
+
     while len(sort_Array)<= list_size*sub_array_size:
         i = sub_array_size-1
         j = 0
@@ -29,23 +29,7 @@ def kway_merge(list_size,elements):
                 sort_Array.append(elements[0])
                 i -=1
                 print "sort array now: ",sort_Array
-=======
-    search = elements[0]
-    for subarray in nums:
-        if search in subarray:
-            print "Found",subarray
-            next_element = subarray.pop(i+1)
-            print next_element
-            elements.remove(elements[0])
-            elements.insert(0,next_element)
-            print "inital array now: ",elements
-            Build_heap(elements)
-            print "array now: ",elements
-            sort_Array.append(elements[0])
-            print "sort array now: ",sort_Array
 
- 
->>>>>>> a98ca68f0c4fa78e3c230076053601751d14dc19
 
 def heapify(nums,i,size):
     l = left_child(i)
