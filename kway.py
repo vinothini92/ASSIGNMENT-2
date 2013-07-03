@@ -11,34 +11,23 @@ def kway_merge(list_size,elements):
     sort_Array = []
     sort_Array.append(elements[0])
     print "Sorted Array in Descending order", sort_Array
-    search = elements[0]
-    for subarray in nums:
-        if search in subarray:
-            print "Found",subarray
-            next_element = subarray.pop(i+1)
-            print next_element
-            elements.remove(elements[0])
-            elements.insert(0,next_element)
-            print "inital array now: ",elements
-            Build_heap(elements)
-            print "array now: ",elements
-            sort_Array.append(elements[0])
-            print "sort array now: ",sort_Array
-
-            
-    '''for j in range(0,list_size):
-        for i in range(0,len(elements)):
-            if len(sort_array)<list_size*len(elements):
-                if elements[0] == d[i][j]:
-                    if temp[0] != d[i][m-1]:
-                        temp[0]=d[i][j+1]
-                        sort(temp)
-                    else:
-                        temp.remove(temp[0])
-                        sort(temp)
-                else:
-                    break
-    return sort_Array'''
+    while len(sort_Array)<= list_size*sub_array_size:
+        i = sub_array_size-1
+        j = 0
+        search = elements[j]
+        for subarray in nums:
+            if search in subarray:
+                print "Found: ",subarray
+                next_element = subarray.pop(i-1)
+                print "next element to be inserted: ",next_element
+                elements.remove(elements[0])
+                print "after removal: ",elements
+                elements.insert(0,next_element)
+                print "after inserting: ",elements
+                Build_heap(elements)
+                sort_Array.append(elements[0])
+                i -=1
+                print "sort array now: ",sort_Array
 
 def heapify(nums,i,size):
     l = left_child(i)
@@ -87,16 +76,17 @@ if __name__ == '__main__':
     #nums = []
     #k = int(raw_input())
     global nums
-    nums = [[5,10,15,20],[6,3,16,9],[2,9,26,40],[8,22,23,24]]
+    nums = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
     list_size = len(nums)
+    array_subsize = len(nums[1])
     print "Input array: ",nums
     '''for i in range(k):
         print "Enter %d Sub-array" %i
         nums.append(get_input())'''
     global initial_array
     initial_array = []
-    for i in range(len(nums)):
-        initial_array.append(nums[i][0])
+    for i in range(list_size):
+        initial_array.append(nums[i][array_subsize-1])
         print initial_array
     kway_merge(list_size,initial_array)
 
