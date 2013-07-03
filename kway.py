@@ -10,11 +10,10 @@ def kway_merge(list_size,elements):
     sub_array_size = len(elements)
     sort_Array = []
     sort_Array.append(elements[0])
+    sub_array_size-1
+    search = elements[0]
     print "Sorted Array in Descending order", sort_Array
     while len(sort_Array)<= list_size*sub_array_size:
-        i = sub_array_size-1
-        j = 0
-        search = elements[j]
         for subarray in nums:
             if search in subarray:
                 print "Found: ",subarray
