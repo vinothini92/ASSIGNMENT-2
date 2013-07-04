@@ -28,6 +28,10 @@ def kway_merge(list_size,elements):
                 sort_Array.append(elements[0])
                 i -=1
                 print "sort array now: ",sort_Array
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0f08616e1aa39cd6f54c0879c1e24a1b19ca0653
 
 def heapify(nums,i,size):
     l = left_child(i)
