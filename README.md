@@ -10,3 +10,7 @@ Remove_duplicates:
 First sort the list so that all duplicate elements will be adjacent to each other.Time taken to sort the list is O(nlogn)
 Next step is to remove all the duplicates in one pass without using another list.The order is preserved and it is in-place
 algorithm.
+
+Monge_arrays:
+  Given Two lists list1[0..m] and list2[0..n].Find the element for an an input K such that list1[i] + list2[j] = k 
+  using Monge array.
